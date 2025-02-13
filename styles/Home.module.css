@@ -1,0 +1,5 @@
+.header {
+  display: block;
+  position: sticky;
+  top: 1rem;
+}
