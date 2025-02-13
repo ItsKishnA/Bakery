@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./../../styles/Home.module.css";
 
 const Header = () => (
-  <header className="sticky top-0 z-40 bg-white bg-opacity-5 backdrop-blur-md m-4 p-4 rounded-lg">
+  <header className="sticky top-4 z-40 bg-black bg-opacity-5 backdrop-blur-md m-4 p-4 rounded-lg">
     <nav className="flex flex-row justify-between items-center">
       <h2>Bakery</h2>
       <div className="flex gap-8">

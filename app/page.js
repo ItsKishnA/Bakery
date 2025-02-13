@@ -24,8 +24,8 @@ export default function Home() {
   const FirstPage = () => {
     return (
       <div className="flex flex-col items-center justify-center text-white">
-        <h1 className="text-4xl">Bakesters Mumma</h1>
-        <p className="text-lg">The best bakery in town</p>
+        <h1 className="text-4xl font-black">Bakesters Mumma</h1>
+        <p className="text-lg font-mono">...The best bakery in Khandwa...</p>
       </div>
     );
   };
