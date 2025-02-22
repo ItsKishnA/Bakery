@@ -22,6 +22,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={
+          {
+            // backgroundImage: "url('/images/melted-drip.png')",
+            // backgroundSize: "contain",
+            // backgroundPosition: "center",
+            // backgroundRepeat: "no-repeat",
+          }
+        }
       >
         <Header />
         {/* <div>NavBar</div> */}

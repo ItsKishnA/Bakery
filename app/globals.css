@@ -2,14 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "abril";
+  src: url("/fonts/AbrilFatFace-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "astroz";
+  src: url("/fonts/Astroz Trial.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bavista";
+  src: url("/fonts/Bavista_Soulare.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "groove";
+  src: url("/fonts/Bold Groove.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "bold-font";
+  src: url("/fonts/THEBOLDFONT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "brillant";
+  src: url("/fonts/brillant.otf") format("openType");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "catchy";
+  src: url("/fonts/Catchy Mager.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "firlest";
+  src: url("/fonts/Firlest-Regular.otf") format("openType");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "geraldine";
+  src: url("/fonts/GERALDINE PERSONAL USE.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "hugh";
+  src: url("/fonts/Hugh is Life Personal Use .ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "overcame-outline";
+  src: url("/fonts/OvercameDemoOutline.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "overcame-regular";
+  src: url("/fonts/OvercameDemoRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sacramento";
+  src: url("/fonts/Sacramento-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "transcity";
+  src: url("/fonts/Transcity.otf") format("openType");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #faf4f0;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f7f5fb;
     --foreground: #ededed;
   }
 }
