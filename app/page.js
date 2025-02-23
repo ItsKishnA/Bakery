@@ -18,6 +18,7 @@ export default function Home() {
   //   [0.7, 0.8],
   //   [0, 1]
   // );
+
   // const horizontalScrollLR = useTransform(
   //   scrollYProgress,
   //   [0, 0.8],
@@ -28,6 +29,39 @@ export default function Home() {
   //   [0, 0.4],
   //   ["25%", "-25%"]
   // );
+
+  const circle_FirstLast_Height = useTransform(
+    scrollYProgress,
+    [0, 0.33],
+    ["25%", "75%"]
+  );
+  const circle_FirstLast_Width = useTransform(
+    scrollYProgress,
+    [0, 0.33],
+    ["30%", "40%"]
+  );
+
+  const circle_SecondFourth_Height = useTransform(
+    scrollYProgress,
+    [0, 0.33],
+    ["75%", "5%"]
+  );
+  const circle_SecondFourth_Width = useTransform(
+    scrollYProgress,
+    [0, 0.33],
+    ["30%", "5%"]
+  );
+
+  const circle_Center_Height = useTransform(
+    scrollYProgress,
+    [0, 0.33],
+    ["30%", "25%"]
+  );
+  const circle_Center_Width = useTransform(
+    scrollYProgress,
+    [0, 0.33],
+    ["30%", "25%"]
+  );
 
   const Tag = ({ name, color, dotted, className }) => {
     return (
@@ -215,14 +249,14 @@ export default function Home() {
     );
   };
 
-  const Dot = ({ width, height, id }) => {
+  const Dot = ({ id, width, height }) => {
     return (
-      <div
+      <motion.span
         className="w-1/6 aspect-square bg-gray-400 rounded-full flex items-center justify-center border-0 border-black"
-        style={{ width: width, height: height }}
+        style={{ height: height, width: width }}
       >
         {/* <div className="w-[90%] aspect-square  bg-white rounded-full"></div> */}
-      </div>
+      </motion.span>
     );
   };
 
@@ -246,15 +280,35 @@ export default function Home() {
         <div className="relative h-full w-full flex flex-col items-center justify-center">
           {/* <FirstPage /> */}
           <motion.div
-            className=" fixed top-[0] flex flex-row w-[80%] h-[95vh] items-center justify-around"
+            className="fixed top-[0] flex flex-row w-[75%] h-[95vh] items-center justify-around gap-3 bg-red-400 overflow-hidden"
             style={{ zIndex: -5 }}
           >
             {/* <div className="w-32 h-32 rounded-full bg-slate-500"></div> */}
-            <Dot id={1} />
-            <Dot id={2} height={"75%"} />
-            <Dot id={3} />
-            <Dot id={4} height={"75%"} />
-            <Dot id={5} />
+            <Dot
+              id={1}
+              height={circle_FirstLast_Height}
+              width={circle_FirstLast_Width}
+            />
+            <Dot
+              id={2}
+              height={circle_SecondFourth_Height}
+              width={circle_SecondFourth_Width}
+            />
+            <Dot
+              id={3}
+              height={circle_Center_Height}
+              width={circle_Center_Width}
+            />
+            <Dot
+              id={4}
+              height={circle_SecondFourth_Height}
+              width={circle_SecondFourth_Width}
+            />
+            <Dot
+              id={5}
+              height={circle_FirstLast_Height}
+              width={circle_FirstLast_Width}
+            />
           </motion.div>
           <FirstPage />
           <SecondPage />
