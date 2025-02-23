@@ -2,33 +2,10 @@
 
 import "./globals.css";
 
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
-  // Get scroll progress (0 to 1)
-  const { scrollYProgress } = useViewportScroll();
-
-  // Map scroll ranges to opacity values for each section.
-  // Adjust these ranges as needed.
-  // const firstContentOpacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
-  // const firstImageOpacity = useTransform(scrollYProgress, [0.1, 0.5], [1, 0]);
-  // const secondImageOpacity = useTransform(scrollYProgress, [0.5, 0.8], [0, 1]);
-  // const secondContentOpacity = useTransform(
-  //   scrollYProgress,
-  //   [0.7, 0.8],
-  //   [0, 1]
-  // );
-
-  // const horizontalScrollLR = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.8],
-  //   ["-25%", "25%"]
-  // );
-  // const horizontalScrollRL = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.4],
-  //   ["25%", "-25%"]
-  // );
+  const { scrollYProgress } = useScroll();
 
   const circle_FirstLast_Height = useTransform(
     scrollYProgress,
@@ -208,7 +185,7 @@ export default function Home() {
             style={{ fontFamily: "bavista", lineHeight: "0.75" }}
           >
             25
-            <span className="text-lg font-mono font-normal leading-tight">
+            <span className="text-base font-mono font-normal leading-tight">
               Number of
             </span>
             <span className="text-lg font-mono font-normal leading-tight">
@@ -220,7 +197,7 @@ export default function Home() {
             style={{ fontFamily: "bold-font" }}
           >
             <span>1 / Top</span>
-            <span className="text-xl font-mono font-light leading-tighter tracking-normal">
+            <span className="text-base font-mono font-light leading-tighter tracking-normal">
               In Khandwa
             </span>
           </motion.span>
@@ -277,10 +254,10 @@ export default function Home() {
             opacity: firstImageOpacity,
           }}
         /> */}
-        <div className="relative h-full w-full flex flex-col items-center justify-center">
+        <div className="relative h-full w-[100vw] flex flex-col items-center justify-center overflow-hidden">
           {/* <FirstPage /> */}
           <motion.div
-            className="fixed top-[0] flex flex-row w-[75%] h-[95vh] items-center justify-around gap-3 bg-red-400 overflow-hidden"
+            className="fixed top-[0] flex flex-col md:flex-row w-[100vw] h-[95vh] items-center justify-around gap-3"
             style={{ zIndex: -5 }}
           >
             {/* <div className="w-32 h-32 rounded-full bg-slate-500"></div> */}
